@@ -1,0 +1,28 @@
+package com.example.jobprofile;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ListView;
+
+public class Myjobs extends AppCompatActivity {
+Button cbutton;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_myjobs);
+        cbutton=findViewById(R.id.fButton);
+
+
+        cbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(Myjobs.this,Createjob.class);
+                startActivity(intent);
+            }
+        });
+    }
+}
